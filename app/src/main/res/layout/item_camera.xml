@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_l"
+    android:layout_marginTop="@dimen/margin_s"
+    android:background="@drawable/door_background"
+    android:elevation="@dimen/margin_xxxs"
+    android:paddingBottom="@dimen/margin_l">
+
+    <ImageView
+        android:id="@+id/iv_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_camera"
+        app:layout_constraintEnd_toEndOf="@id/iv_camera"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginEnd="@dimen/margin_m"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:src="@drawable/ic_rec"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/iv_camera"
+        app:layout_constraintTop_toTopOf="@id/iv_camera" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_camera"
+        app:layout_constraintEnd_toEndOf="@id/iv_camera"
+        app:layout_constraintStart_toStartOf="@id/iv_camera"
+        app:layout_constraintTop_toTopOf="@id/iv_camera" />
+
+    <TextView
+        android:id="@+id/tv_camera_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_l"
+        android:layout_marginTop="@dimen/margin_l"
+        android:fontFamily="@font/circe_regular"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_l"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_camera"
+        tools:text="Камера 1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

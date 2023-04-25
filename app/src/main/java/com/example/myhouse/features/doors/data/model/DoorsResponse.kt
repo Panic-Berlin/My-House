@@ -13,6 +13,6 @@ data class DataResponse(
     val favorites: Boolean,
     val id: Int,
     val name: String,
-    val room: String,
-    val snapshot: String
+    val room: String?,
+    val snapshot: String?
 )

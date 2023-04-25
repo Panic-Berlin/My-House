@@ -25,7 +25,7 @@ class DoorsViewModel @Inject constructor(
         getDoors()
     }
 
-    fun getDoors(){
+    private fun getDoors(){
         viewModelScope.launch {
             _doors.value = doorsInteractor.getDoors().asViewState()
             Log.d("DoorsViewModel", "getDoors: ${_doors.value}")

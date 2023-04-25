@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_l"
+    android:layout_marginTop="@dimen/margin_s"
+    android:background="@drawable/door_background"
+    android:elevation="@dimen/margin_xxxs"
+    android:paddingBottom="@dimen/margin_l">
+
+    <ImageView
+        android:id="@+id/iv_door"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/iv_door"
+        app:layout_constraintBottom_toBottomOf="@id/iv_door"
+        app:layout_constraintStart_toStartOf="@id/iv_door"
+        app:layout_constraintEnd_toEndOf="@id/iv_door"/>
+
+    <TextView
+        android:id="@+id/tv_door_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_l"
+        android:layout_marginTop="@dimen/margin_l"
+        android:fontFamily="@font/circe_regular"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_l"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_door"
+        tools:text="Подъезд 2" />
+
+    <TextView
+        android:id="@+id/tv_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_l"
+        android:textColor="@color/teal_200"
+        android:textSize="@dimen/text_size_s"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_door_name"
+        tools:text="В сети" />
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_l"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintBottom_toBottomOf="@id/tv_online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_door_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
